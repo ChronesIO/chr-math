@@ -1,22 +1,18 @@
 > :information_source: This project is currently work in progress
 
-# chr-mem
-[![](https://tokei.rs/b1/github/ChronesIO/chr-mem?category=files)](https://github.com/ChronesIO/chr-mem)
-[![](https://tokei.rs/b1/github/ChronesIO/chr-mem?category=code)](https://github.com/ChronesIO/chr-mem)
+# chr-math
+[![](https://tokei.rs/b1/github/ChronesIO/chr-math?category=files)](https://github.com/ChronesIO/chr-math)
+[![](https://tokei.rs/b1/github/ChronesIO/chr-math?category=code)](https://github.com/ChronesIO/chr-math)
 
-**chr-mem**, module of [chr](https://github.com/ChronesIO/chr), another standard library layer.
+**chr-math**, module of [chr](https://github.com/ChronesIO/chr), another standard library layer.
 
 ---
 Head Module: [chr](https://github.com/ChronesIO/chr)
 
 Other Modules:
 - [chr-core](https://github.com/ChronesIO/chr-core) *(core library content)*
+- [chr-mem](https://github.com/ChronesIO/chr-mem) *(memory hacking tools)*
 ---
 
 Upcoming Features:
-- Memory Read Write
-- Protected Memory Read Write
-- Multi-Level Pointers
-- Signature Scanning
-- VTable Hooking
-- VTable Instancing
+- Vectors
