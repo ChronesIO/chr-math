@@ -45,26 +45,26 @@ namespace chr
 
         bool operator==(const Vector1& other) const = default;
         bool operator!=(const Vector1& other) const = default;
-        Vector1<T> operator+(Vector1<T>& other) const { return Vector1<T>(this->X + other.X); }
-        Vector1<T> operator-(Vector1<T>& other) const { return Vector1<T>(this->X - other.X); }
-        Vector1<T> operator*(Vector1<T>& other) const { return Vector1<T>(this->X * other.X); }
-        Vector1<T> operator/(Vector1<T>& other) const { return Vector1<T>(this->X / other.X); }
-        Vector1<T>& operator+=(Vector1<T>& other)
+        Vector1<T> operator+(const Vector1<T>& other) const { return Vector1<T>(this->X + other.X); }
+        Vector1<T> operator-(const Vector1<T>& other) const { return Vector1<T>(this->X - other.X); }
+        Vector1<T> operator*(const Vector1<T>& other) const { return Vector1<T>(this->X * other.X); }
+        Vector1<T> operator/(const Vector1<T>& other) const { return Vector1<T>(this->X / other.X); }
+        Vector1<T>& operator+=(const Vector1<T>& other)
         {
             this->X += other.X;
             return *this;
         }
-        Vector1<T>& operator-=(Vector1<T>& other)
+        Vector1<T>& operator-=(const Vector1<T>& other)
         {
             this->X -= other.X;
             return *this;
         }
-        Vector1<T>& operator*=(Vector1<T>& other)
+        Vector1<T>& operator*=(const Vector1<T>& other)
         {
             this->X *= other.X;
             return *this;
         }
-        Vector1<T>& operator/=(Vector1<T>& other)
+        Vector1<T>& operator/=(const Vector1<T>& other)
         {
             this->X /= other.X;
             return *this;
@@ -113,29 +113,29 @@ namespace chr
 
         bool operator==(const Vector2& other) const = default;
         bool operator!=(const Vector2& other) const = default;
-        Vector2<T> operator+(Vector2<T>& other) const { return Vector2<T>(this->X + other.X, this->Y + other.Y); }
-        Vector2<T> operator-(Vector2<T>& other) const { return Vector2<T>(this->X - other.X, this->Y - other.Y); }
-        Vector2<T> operator*(Vector2<T>& other) const { return Vector2<T>(this->X * other.X, this->Y * other.Y); }
-        Vector2<T> operator/(Vector2<T>& other) const { return Vector2<T>(this->X / other.X, this->Y / other.Y); }
-        Vector2<T>& operator+=(Vector2<T>& other)
+        Vector2<T> operator+(const Vector2<T>& other) const { return Vector2<T>(this->X + other.X, this->Y + other.Y); }
+        Vector2<T> operator-(const Vector2<T>& other) const { return Vector2<T>(this->X - other.X, this->Y - other.Y); }
+        Vector2<T> operator*(const Vector2<T>& other) const { return Vector2<T>(this->X * other.X, this->Y * other.Y); }
+        Vector2<T> operator/(const Vector2<T>& other) const { return Vector2<T>(this->X / other.X, this->Y / other.Y); }
+        Vector2<T>& operator+=(const Vector2<T>& other)
         {
             this->X += other.X;
             this->Y += other.Y;
             return *this;
         }
-        Vector2<T>& operator-=(Vector2<T>& other)
+        Vector2<T>& operator-=(const Vector2<T>& other)
         {
             this->X -= other.X;
             this->Y -= other.Y;
             return *this;
         }
-        Vector2<T>& operator*=(Vector2<T>& other)
+        Vector2<T>& operator*=(const Vector2<T>& other)
         {
             this->X *= other.X;
             this->Y *= other.Y;
             return *this;
         }
-        Vector2<T>& operator/=(Vector2<T>& other)
+        Vector2<T>& operator/=(const Vector2<T>& other)
         {
             this->X /= other.X;
             this->Y /= other.Y;
@@ -190,44 +190,44 @@ namespace chr
         bool operator==(const Vector3& other) const = default;
         bool operator!=(const Vector3& other) const = default;
 
-        Vector3<T> operator+(Vector3<T>& other) const
+        Vector3<T> operator+(const Vector3<T>& other) const
         {
             return Vector3<T>(this->X + other.X, this->Y + other.Y, this->Z + other.Z);
         }
-        Vector3<T> operator-(Vector3<T>& other) const
+        Vector3<T> operator-(const Vector3<T>& other) const
         {
             return Vector3<T>(this->X - other.X, this->Y - other.Y, this->Z - other.Z);
         }
-        Vector3<T> operator*(Vector3<T>& other) const
+        Vector3<T> operator*(const Vector3<T>& other) const
         {
             return Vector3<T>(this->X * other.X, this->Y * other.Y, this->Z * other.Z);
         }
-        Vector3<T> operator/(Vector3<T>& other) const
+        Vector3<T> operator/(const Vector3<T>& other) const
         {
             return Vector3<T>(this->X / other.X, this->Y / other.Y, this->Z / other.Z);
         }
-        Vector3<T>& operator+=(Vector3<T>& other)
+        Vector3<T>& operator+=(const Vector3<T>& other)
         {
             this->X += other.X;
             this->Y += other.Y;
             this->Z += other.Z;
             return *this;
         }
-        Vector3<T>& operator-=(Vector3<T>& other)
+        Vector3<T>& operator-=(const Vector3<T>& other)
         {
             this->X -= other.X;
             this->Y -= other.Y;
             this->Z -= other.Z;
             return *this;
         }
-        Vector3<T>& operator*=(Vector3<T>& other)
+        Vector3<T>& operator*=(const Vector3<T>& other)
         {
             this->X *= other.X;
             this->Y *= other.Y;
             this->Z *= other.Z;
             return *this;
         }
-        Vector3<T>& operator/=(Vector3<T>& other)
+        Vector3<T>& operator/=(const Vector3<T>& other)
         {
             this->X /= other.X;
             this->Y /= other.Y;
@@ -292,23 +292,23 @@ namespace chr
         bool operator==(const Vector4& other) const = default;
         bool operator!=(const Vector4& other) const = default;
 
-        Vector4<T> operator+(Vector4<T>& other) const
+        Vector4<T> operator+(const Vector4<T>& other) const
         {
             return Vector4(this->X + other.X, this->Y + other.Y, this->Z + other.Z, this->W + other.W);
         }
-        Vector4<T> operator-(Vector4<T>& other) const
+        Vector4<T> operator-(const Vector4<T>& other) const
         {
             return Vector4(this->X - other.X, this->Y - other.Y, this->Z - other.Z, this->W - other.W);
         }
-        Vector4<T> operator*(Vector4<T>& other) const
+        Vector4<T> operator*(const Vector4<T>& other) const
         {
             return Vector4(this->X * other.X, this->Y * other.Y, this->Z * other.Z, this->W * other.W);
         }
-        Vector4<T> operator/(Vector4<T>& other) const
+        Vector4<T> operator/(const Vector4<T>& other) const
         {
             return Vector4(this->X / other.X, this->Y / other.Y, this->Z / other.Z, this->W / other.W);
         }
-        Vector4<T>& operator+=(Vector4<T>& other)
+        Vector4<T>& operator+=(const Vector4<T>& other)
         {
             this->X += other.X;
             this->Y += other.Y;
@@ -316,7 +316,7 @@ namespace chr
             this->W += other.W;
             return *this;
         }
-        Vector4<T>& operator-=(Vector4<T>& other)
+        Vector4<T>& operator-=(const Vector4<T>& other)
         {
             this->X -= other.X;
             this->Y -= other.Y;
@@ -324,7 +324,7 @@ namespace chr
             this->W -= other.W;
             return *this;
         }
-        Vector4<T>& operator*=(Vector4<T>& other)
+        Vector4<T>& operator*=(const Vector4<T>& other)
         {
             this->X *= other.X;
             this->Y *= other.Y;
@@ -332,7 +332,7 @@ namespace chr
             this->W *= other.W;
             return *this;
         }
-        Vector4<T>& operator/=(Vector4<T>& other)
+        Vector4<T>& operator/=(const Vector4<T>& other)
         {
             this->X /= other.X;
             this->Y /= other.Y;
