@@ -288,6 +288,16 @@ namespace chr
             , W(v)
         {
         }
+        constexpr Vector4(Vector2<T> hv)
+            : Vector3<T>(hv.X, hv.Y, hv.X)
+            , W(hv.Y)
+        {
+        }
+        constexpr Vector4(Vector2<T> xy, Vector2<T> zw)
+            : Vector3<T>(xy.X, xy.Y, zw.X)
+            , W(zw.Y)
+        {
+        }
 
         bool operator==(const Vector4& other) const = default;
         bool operator!=(const Vector4& other) const = default;
